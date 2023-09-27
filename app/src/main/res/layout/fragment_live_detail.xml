@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141650"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LiveDetailFragment">
+
+    <GridLayout
+        android:id="@+id/hostVideoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/hostImagePlaceholder"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/default_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/show_default_avatar" />
+            <TextView
+                android:id="@+id/tvLivingEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="12dp"
+                android:text="Live Streaming"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_below="@id/default_image"/>
+
+            <ImageView
+                android:id="@+id/agora_icon"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/agora_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="100dp"
+                android:text="Powered by"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoomTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/show_live_detail_top_view_bg"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/show_roundStyle_50"
+            app:strokeColor="@android:color/transparent"
+            tools:src="@mipmap/portrait07"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/channelName"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:singleLine="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/user_icon"
+            app:layout_constraintTop_toTopOf="@id/user_icon"
+            app:layout_constraintBottom_toBottomOf="@id/user_icon"
+            tools:text="Room - Live13425" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/show_room_item_text_bg"
+        android:drawableStart="@mipmap/show_list_living"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="3dp"
+        android:text="Live"
+        android:layout_gravity="top|right"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+</FrameLayout>
