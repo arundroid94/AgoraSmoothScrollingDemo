@@ -1,5 +1,7 @@
 package com.example.smoothscrollingdemo;
 
+import static io.agora.rtc2.Constants.CLIENT_ROLE_AUDIENCE;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -40,6 +42,7 @@ public class LiveStreamingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_live_streaming);
 
         mRtcEngine = ((MyApplication) getApplication()).getRtcEngine();
+        mRtcEngine.setClientRole(CLIENT_ROLE_AUDIENCE);
         mRtcEngine.enableVideo();
         mRtcEngine.enableInstantMediaRendering();
 
