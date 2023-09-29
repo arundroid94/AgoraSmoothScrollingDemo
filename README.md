@@ -1,6 +1,7 @@
 
 # AgoraSmoothScrollingViewPager
 Building a Smooth Vertical Scrolling Viewpager2 for Live Video Streams using Agora RTC SDK
+**Complete guide:** https://medium.com/@arundroid94/building-smooth-scrolling-with-agora-rtc-sdk-in-less-than-90-minutes-6f214ef28447
 
 **Prerequisites to run the demo:**
 
